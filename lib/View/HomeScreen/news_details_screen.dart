@@ -38,10 +38,12 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
               Container(
                 height: Get.height * 0.30,
                 width: Get.width,
-                color: Colors.white,
-                child: Image.network(
-                  '${widget.imageUrl}',
-                  fit: BoxFit.fill,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.network(
+                    '${widget.imageUrl}',
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
               SizedBox(

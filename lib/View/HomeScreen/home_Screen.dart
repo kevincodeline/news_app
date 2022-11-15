@@ -80,9 +80,9 @@ class _HomeScreenState extends State<HomeScreen>
                 indicatorColor: Color(0xFF828282),
                 controller: _tabController,
                 indicator: BoxDecoration(
-                  color: Colors.black,
-                  border: Border.all(color: Colors.white),
-                ),
+                    color: Colors.black,
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(8)),
                 isScrollable: true,
                 tabs: [
                   Tab(
@@ -165,10 +165,13 @@ class _HomeScreenState extends State<HomeScreen>
                                               Container(
                                                 height: Get.height * 0.10,
                                                 width: Get.height * 0.10,
-                                                color: Colors.white,
-                                                child: Image.network(
-                                                  '${data.data![index1].imageUrl}',
-                                                  fit: BoxFit.fill,
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  child: Image.network(
+                                                    '${data.data![index1].imageUrl}',
+                                                    fit: BoxFit.fill,
+                                                  ),
                                                 ),
                                               ),
                                               SizedBox(
